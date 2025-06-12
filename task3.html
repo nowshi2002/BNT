@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Map + Web Storage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    input[type="text"], input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    #result {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    iframe {
+      display: block;
+      margin: 30px auto;
+      border: none;
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📍 Google Map & Web Storage Example</h1>
+
+  <form onsubmit="storeData(event)">
+    <label for="name">Enter Your Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="location">Enter Location (City or Area):</label>
+    <input type="text" id="location" required>
+
+    <input type="submit" value="Save & Show Map">
+  </form>
+
+  <div id="result"></div>
+
+  <iframe
+    id="mapFrame"
+    src="https://www.google.com/maps?q=India&output=embed"
+    allowfullscreen>
+  </iframe>
+
+  <script>
+    function storeData(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const location = document.getElementById("location").value.trim();
+
+      // Save to localStorage
+      localStorage.setItem("username", name);
+      localStorage.setItem("userlocation", location);
+
+      // Update Result Text
+      document.getElementById("result").innerText = `Hello, ${name}! Map for "${location}" is shown below.`;
+
+      // Update Google Map Iframe
+      const mapFrame = document.getElementById("mapFrame");
+      mapFrame.src = `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`;
+    }
+
+    // Optional: Auto-load from localStorage on page refresh
+    window.onload = function() {
+      const storedName = localStorage.getItem("username");
+      const storedLocation = localStorage.getItem("userlocation");
+
+      if (storedName && storedLocation) {
+        document.getElementById("result").innerText = `Welcome back, ${storedName}!`;
+        document.getElementById("mapFrame").src = `https://www.google.com/maps?q=${encodeURIComponent(storedLocation)}&output=embed`;
+      }
+    };
+  </script>
+
+</body>
+</html>
