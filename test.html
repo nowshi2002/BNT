@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Test</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left"></div>
+    <header class="header">
+        <div class="header-left"></div>
+            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTyhgwFBBuEqiLB5BAjQR4hCDCoJYefwwYtelRMap_8uXFoyisZLRptYiqLuXet0zX9X9Z4z_UAxYbYCcyD9Pm8i2iEe1ljOiYaXfrieWMo7cAQCVQZQ8iYoWz5pDdJFY67SAOckK9jv-c" alt="Donald Trump" class="header-image">
+            <span class="brand-name">DONALD TRUMP</span>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <style>
+        .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                background: #1124d1;
+            }
+            .header-left {
+                display: flex;
+                align-items: center;
+            }
+            .header-image {
+                width: 100px;
+                height: 100px;
+                margin-right: 15px;
+            }
+            .brand-name {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-right: 30px;
+            }
+            .nav-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            .nav-item {
+                margin-right: 15px;
+            }
+            .nav-item:last-child {
+                margin-right: 0;
+            }
+            .nav-link {
+                text-decoration: none;
+                color: #333;
+                padding: 8px 16px;
+                border-radius: 4px;
+                transition: background 0.2s;
+            }
+            .nav-link:hover {
+                background: #de0c0c;
+            }
+            .table {
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            width: 75%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table th,
+        .table td {
+            border: 1px solid #000;
+            padding: 8px;
+        }
+.table th {
+            text-align: center;
+        }
+.survey {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fafafa;
+}
+.survey .form {
+    margin-bottom: 12px;
+}
+.survey label {
+    font-weight: 500;
+}
+.survey input[type="text"],
+.survey input[type="number"],
+.survey select,
+.survey textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 6px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+        </style>
+    </header>
+    </header>
+    <hr>
+    <h3 style="text-align: center;">TASK2</h3>
+    <p>
+        FITA is an <b>Online &amp; Offline transformative</b> <i>upskilling platform</i> for working tech <s>&amp; business</s> professionals.<sup>*</sup> &copy;
+    </p>
+    <hr>
+    <h3 style="text-align: center;">TASK3</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="4">Book Information</th>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <th>Authors</th>
+                <th>Publiction Date</th>
+                <th>No of Pages</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Title1</td>
+                <td>Author-1</td>
+                <td>1925</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>Title-2</td>
+                <td>Author-2</td>
+                <td>1934</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>Title-3</td>
+                <td rowspan="3">Author-3</td>
+                <td>1949</td>
+                <td>320</td>
+            </tr>
+            <tr>
+                <td>Title-4</td>
+                <td>1945</td>
+                <td>120</td>
+            </tr>
+        </tbody>
+    </table>
+<hr>
+<h3 style="text-align: center;">TASK 4</h3>
+<form class="survey">
+    <div class="form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form">
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" min="1" max="30" required>
+    </div>
+    <div class="form">
+        Gender:<br>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+    </div>
+    <div class="form"></div>
+        <label for="food">Favorite Food:</label><br>
+        <select id="food" name="food" required>
+            <option value="">Select</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Indian">Indian</option>
+            <option value="Italian">Italian</option>
+            <option value="Mexican">Mexican</option>
+        </select>
+    </div>
+    <div class="form">
+        <input type="checkbox" id="cook" name="cook">
+        <label for="cook">Do you like to cook?</label>
+    </div>
+    <div class="form">
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="3" cols="30"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+    <hr>
+<h3 style="text-align: center;">TASK 5</h3>
+
+<ol reversed type="a" style="font-size: 1.5em;">
+    <li>New York</li>
+    <li>Tokyo</li>
+    <li>Paris</li>
+    <li>Sydney</li>
+    <li>Dubai</li>
+</ol>
+
+<ul reversed type="square" style="font-size: 1.5em;"></ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Orange Juice</li>
+</ul>
+<hr>
+
+<h3 style="text-align: center;">TASK 6</h3>
+<h2 style="text-align: center;">OFFER</h2>
+<div class="simple-pricing">
+    <div class="simple-card">
+        <h4>Basic</h4>
+        <p class="simple-price">$99/mo</p>
+        <ul class="none">
+            <li>1 meal per day</li><hr>
+            <li>Order anytime</li><hr>
+            <li>Free delivery</li><hr>
+        </ul>
+        <button>im hungry
+        </button>
+    </div>
+    <div class="simple-card">
+        <h4>Standard</h4>
+        <p class="simple-price">$199/mo</p>
+        <ul class="none">
+            <li>2 meals per day</li><hr>
+            <li>Order anytime</li><hr>
+            <li>Free delivery</li><hr>
+        </ul>
+        <button>im hungry</button>
+    </div>
+    <div class="simple-card">
+        <h4>Premium</h4>
+        <p class="simple-price">$299/mo</p>
+        <ul class="none">
+            <li>3 meals per day</li><hr>
+            <li>Order anytime</li><hr>
+            <li>Free delivery</li><hr>
+        </ul>
+        <button>im hungry</button>
+    </div>
+</div>
+<style>
+.simple-pricing {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+}
+.simple-card {
+    position: relative;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 16px;
+    width: 180px;
+    text-align: center;
+    background: #f2f2f2;
+    box-shadow: #99370d 0px 0px 10px 0px;
+    transition: transform 0.3s ease;
+}
+.simple-card h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 8px 0;
+}
+.none li {
+    text-align: center;
+    list-style-type: none;
+}
+
+.simple-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 8px 0;
+}
+.simple-card ul {
+    list-style: disc inside;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+.simple-card button {
+    display: block;
+position: absolute;
+left: 30%;
+    margin: px auto 0 auto;
+    padding: 6px 18px;
+    border: none;
+    background: #d11111;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.simple-card button:hover {
+    background: #99370d;
+}
+.simple-card button:active {
+    background: #e25103e2;
+}
+</style>
+<hr>
+<h3 style="text-align: center;">TASK 7</h3>
+<div class="box"></div>
+<style>
+.box {
+    width: 80px;
+    height: 80px;
+    background: #2711d1;
+    position: relative;
+    border-radius: 8px;
+    animation: moveRight 5s infinite;
+}
+
+@keyframes moveRight {
+    0% {
+        left: 0%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+</style>
+<hr>
+<h3 style="text-align: center;">TASK 8</h3>
+<div class="boxes"></div>
+<style>
+.boxes {
+    width: 80px;
+    height: 80px;
+    background: #11d14a;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.boxes:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+</style>
+<hr>
+<h3 style="text-align: center;">TASK 9</h3>
+
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<br>
+<video src="video.mp4" controls autoplay muted poster="poster.jpg" width="400">
+    Your browser does not support the video tag.
+</video>
+<hr>
+<h3 style="text-align: center;">TASK 10</h3>
+<div class="card">
+    <div class="image-section">
+        <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTyhgwFBBuEqiLB5BAjQR4hCDCoJYefwwYtelRMap_8uXFoyisZLRptYiqLuXet0zX9X9Z4z_UAxYbYCcyD9Pm8i2iEe1ljOiYaXfrieWMo7cAQCVQZQ8iYoWz5pDdJFY67SAOckK9jv-c" alt="trump" />
+    </div>
+    <div class="content-section">
+        <h4>Card</h4>
+        <p>
+            <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magnam dolor saepe ea. Beatae a officia at ex eum maxime ullam, deleniti id, sed quam reiciendis commodi cumque, hic architecto.</strong>
+        </p>
+    </div>
+</div>
+<style>
+.card {
+    width: 100%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    background: #dedede;
+    transition: box-shadow 0.3s, transform 0.3s;
+    border-radius: 0;
+    overflow: hidden;
+}
+.card .image-section {
+    display: none;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card .content-section {
+    padding: 16px;
+}
+@media (min-width: 600px) {
+    .card {
+        width: 80%;
+        font-size: 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+        border-radius: 6px;
+    }
+
+}
+@media (min-width: 900px) {
+    .card {
+        display: flex;
+        width: 70%;
+        font-size: 18px;
+        border-radius: 10px;
+        text-align: left;
+    }
+    .card .image-section {
+        display: block;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    .card .content-section {
+        flex: 1 1 70%;
+        padding: 32px;
+    }
+}
+</style>
+<hr>
+<h3 style="text-align: center;">TASK 11</h3>
+<form class="login-form" style="text-align: center;">
+    <div>
+        <label for="login-email">Email:</label><br>
+        <input type="email" id="login-email" name="email" required>
+    </div>
+    <div>
+        <label for="login-password">Password:</label><br>
+        <input type="password" id="login-password" name="password" required minlength="6">
+    </div>
+    <div>
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember Me</label>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+<hr>
+<h3 style="text-align: center;">TASK 12</h3>
+<div class="sticky-sections">
+    <section>
+        <h2 class="sticky-heading">Section 1</h2>
+        <p>Apple, Banana, Orange.</p>
+    </section>
+    <section>
+        <h2 class="sticky-heading">Section 2</h2>
+        <p>Cat, Dog, Bird.</p>
+    </section>
+    <section>
+        <h2 class="sticky-heading">Section 3</h2>
+        <p>Red, Blue, Green.</p>
+    </section>
+</div>
+<style>
+.sticky-sections {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #eaa7a7;
+    border-radius: 4px;
+    padding: 0 0 24px 0;
+}
+.sticky-sections section {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+.sticky-heading {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background: #1124d1;
+    color: #fff;
+    padding: 12px 0 12px 12px;
+    margin: 0 -20px 16px -20px;
+    font-size: 1.4em;
+    z-index: 2;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+</style>
+<hr>
+<h3 style="text-align: center;">TASK 13</h3>
+<ul class="demo" style="font-size: 1.5em;">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+    <li>Dates</li>
+    <li>berry</li>
+    <li>Fig</li>
+    <li>Grape</li>
+    <li>muttai</li>
+    <li>kadala muttai</li>
+</ul>
+<style>
+.demo li:nth-child(3n) {
+    background: #afa153;
+    color: #1124d1;
+    font-weight: bold;
+    border-radius: 6px;
+}
+</style>
+<hr>
+<h3 style="text-align: center;">TASK 14</h3>
+<div class="color-circle"></div>
+<style>
+.color-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 90%;
+    margin: 20px auto;
+    animation: colorChange 2s linear infinite;
+}
+@keyframes colorChange {
+    0% { background: red; }
+    25% { background: red; }
+    50% { background: blue; }
+    100% { background: green; }
+ 
+}
+</style>
+</body>
+</html>
