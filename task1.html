@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<style>
+  body {
+    height: 100vh;
+    margin: 0;
+   
+    background: #f7f7fa;
+    font-family: Arial, sans-serif;
+  }
+  .task1{
+   
+     display: flex;
+
+    justify-content: center; 
+  }
+  #bt1 {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+    margin-bottom: 20px;
+  }
+  #bt1:hover {
+    background: #0056b3;
+  }
+  #count {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-top: 2px;
+    letter-spacing: 2px;
+  }
+</style>
+
+<body>
+  <h1 style="display: block; background-color: #222; color: #f7f7fa; text-align: center;">task1  Countdown</h1>
+  <div class="task1">
+  <button id="bt1" onclick="Countdown()">Countdown</button>
+  <p id="count"></p>
+
+</div>
+
+  
+</body> 
+<script>
+
+  function Countdown(){
+    let x=15;
+    const interval = setInterval(()=>{
+      document.getElementById("count").textContent=x;
+      x--;
+       if(x<0){
+      clearInterval(interval);
+      console.log("countdown finished")
+    }
+    },1000);
+  
+  }
+</script>
+<br>
+<style>
+  .task2 {
+    padding: 20px;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  .task2 button {
+      background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+    margin-bottom: 20px;
+  }
+  #stop {
+    font-size: 2em;
+    margin-top: 10px;
+  }
+</style>
+ <h1 style="display: block; background-color: #222; color: #f7f7fa; text-align: center;">task2 Stopwatch</h1>
+<div class="task2">
+  <button  onclick="stopwatchstart()">Start</button>
+  <button onclick="stopwatchstop()">Stop</button>
+  <button onclick="stopwatchreset()">Reset</button>
+  <p id="stop">0</p>
+</div>
+
+<script>
+  let seconds = 0;
+  let timer = null;
+
+  function stopwatchstart() {
+    if (timer !== null) return; 
+    timer = setInterval(() => {
+      seconds++;
+      document.getElementById("stop").textContent = seconds;
+    }, 100); 
+  }
+
+  function stopwatchstop() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  function stopwatchreset() {
+    stopwatchstop();
+    seconds = 0;
+    document.getElementById("stop").textContent = seconds;
+  }
+</script>
+<br>
+<h1 style="display: block; background-color: #222; color: #f7f7fa; text-align: center;">task3 THIS</h1>
+<p id="lala" style="font-size: large  ;"></p>
+<script>
+  const person = {
+    name: 'Arun',
+    greet: function() {
+      document.getElementById("lala").textContent = 'Hi, my name is ' + this.name;
+    }
+  };
+
+  person.greet();
+</script>
+<br>
+<h1 style="display: block; background-color: #222; color: #f7f7fa; text-align: center;">task 4 map, fliter , reduce</h1>
+<p style="font-weight: 800; font-size: 30px; text-align: center;">check console</p>
+<script>
+const num = [0,1,2,3,4,5,6,7,8,9,10];
+
+let doubled = num.map(n => n * 2);
+
+let filtered = num.filter(n => n % 2 === 0);
+
+let reduced = num.reduce((acc, n) => acc + n, 0);
+
+console.log('Doubled:', doubled);
+console.log('Filtered:', filtered);
+console.log('Reduced:', reduced);
+
+
+</script>
+
+<h1 style="display: block; background-color: #222; color: #f7f7fa; text-align: center;">task 5 get and set</h1>
+<input type="text" id="myInput" value="Hello">
+<button id="getBtn">Get Value</button>
+<button id="setBtn">Set Value</button>
+
+<script>
+
+  $('#getBtn').click(function() {
+    let val = $('#myInput').val(); 
+    alert('Input value: ' + val);
+  });
+
+  
+  $('#setBtn').click(function() {
+    $('#myInput').val('Vanakkam!'); 
+  });
+</script>
+<h1 style="display: block; background-color: #222; color: #f7f7fa; text-align: center;">task 6 manipulate html Content</h1>
+<div id="content">Old Content</div>
+<button id="htmlBtn">Set HTML</button>
+<button id="textBtn">Set Text</button>
+
+<script>
+  $('#htmlBtn').click(function(){
+  $('#content').html('<b>new <i> cotent <i> </b>');
+  });
+
+  $('#textBtn').click(function(){
+  $('#content').html('<b> new new content </b>');
+  });
+</script>
+<h1 style="display: block; background-color: #222; color: #f7f7fa; text-align: center;">task 7 add , toggle , remove</h1>
+<div id="div"> box</div>
+<button id="add">add</button>
+<button id="remove">remove</button>
+<button id="toggle">toggle</button>
+ <style>
+  .highlight{
+    display: block;
+    background: yellow;
+  }
+ </style>
+ <script>
+  $('#add').click(function(){
+  $('#div').addClass('highlight');
+  });
+   $('#remove').click(function(){
+  $('#div').removeClass('highlight');
+  });
+   $('#toggle').click(function(){
+  $('#div').toggleClass('highlight');
+  });
+ </script>
+ <h1 style="display: block; background-color: #222; color: #f7f7fa; text-align: center;">task 8 handle event</h1>
+ <div id="eve"></div>
+ <button id="event">CLICK ME</button>
+ <script>
+  $('#event').click(function(){
+  alert('Event got triggered');
+  });
+
+ </script>
+  <h1 style="display: block; background-color: #222; color: #f7f7fa; text-align: center;">task 9 animate</h1>
+<div id="animate" style="width: 100px; height: 100px; background-color: #007bff; border-radius: 10%; position: relative;"></div>
+<button id="ani" style="  background-color: antiquewhite; width: 75px; height: 30px; margin-top: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;"> animate</button>
+<script>
+  $('#ani').click(function(){
+  $('#animate').animate({ left: '200px' }, 1000);
+  });
+</script>
+  <h1 style="display: block; background-color: #222; color: #f7f7fa; text-align: center;">task 10 arrow vs normal</h1>
+  <p style="font-weight: 800; font-size: 30px; text-align: center;">check console</p>
+
+  <script>
+    let a = 10;
+    let b = 20;
+    function add(a,b){
+      return a+b;
+    }
+    let arrow = (a,b) =>a+b;
+    console.log('normal:', add(a,b));
+    console.log('arrow', arrow(a,b));
+  </script>
+
+
+
+</body>
+</html>
